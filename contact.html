@@ -182,17 +182,7 @@
                 </div>
 
 
-                <!-- GITHUB BUTTON -->
-
-                <a
-                    href="#"
-                    class="github-button"
-                    id="githubLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View GitHub Project →
-                </a>
+                <!-- GitHub button removed per request -->
 
             </div>
 
@@ -216,10 +206,13 @@
                 </div>
 
 
-                <form
-                    id="contactForm"
-                    novalidate
-                >
+                <form id="contactForm" action="https://formsubmit.co/ngugijacinta07@gmail.com" method="POST" novalidate>
+
+                    <!-- Hidden config fields for FormSubmit.co -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - TechPath Advisor">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://jacintangugi.github.io/techpath-advisor/contact.html?sent=true">
 
 
                     <!-- NAME -->
@@ -278,37 +271,9 @@
                             Subject
                         </label>
 
-                        <select
-                            id="contactSubject"
-                            name="subject"
-                        >
+                        <input type="text" id="contactSubject" name="subject" placeholder="What's this about?">
 
-                            <option value="">
-                                Select a subject
-                            </option>
-
-                            <option value="feedback">
-                                Quiz Feedback
-                            </option>
-
-                            <option value="technical">
-                                Technical Issue
-                            </option>
-
-                            <option value="suggestion">
-                                Suggestion
-                            </option>
-
-                            <option value="other">
-                                Other
-                            </option>
-
-                        </select>
-
-                        <small
-                            class="error-message"
-                            id="contactSubjectError"
-                        ></small>
+                        <small class="error-message" id="contactSubjectError"></small>
 
                     </div>
 

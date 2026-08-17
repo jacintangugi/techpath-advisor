@@ -3,7 +3,6 @@
 const form = document.getElementById("studentForm");
 
 const nameInput = document.getElementById("name");
-const studentIdInput = document.getElementById("studentId");
 const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
 
@@ -79,31 +78,6 @@ function validateName(){
 
 
 
-// Student ID validation
-
-function validateStudentID(){
-
-    const regex = /^BSE\d{4}[A-Z]{4}$/;
-
-
-    if(!regex.test(studentIdInput.value)){
-
-        showError(
-            studentIdInput,
-            "Format example: BSE2026ABCD"
-        );
-
-        return false;
-
-    }
-
-
-    showSuccess(studentIdInput);
-
-    return true;
-
-}
-
 
 
 // Email validation
@@ -172,10 +146,7 @@ validateName
 );
 
 
-studentIdInput.addEventListener(
-"input",
-validateStudentID
-);
+// Student ID removed — no event listener
 
 
 emailInput.addEventListener(
@@ -202,7 +173,6 @@ function(event){
 
     const valid =
     validateName() &&
-    validateStudentID() &&
     validateEmail() &&
     validatePhone();
 
@@ -212,7 +182,6 @@ function(event){
         // Save student info so the quiz/results pages can use it.
         const studentProfile = {
             name: nameInput.value.trim(),
-            studentId: studentIdInput.value.trim(),
             email: emailInput.value.trim(),
             phone: phoneInput.value.trim()
         };
@@ -224,8 +193,20 @@ function(event){
             console.warn('Could not save student profile to localStorage', e);
         }
 
-        // Navigate to the quiz page after successful validation.
-        window.location.href = 'quiz.html';
+        // Open user's email client with a pre-filled message to notify you.
+        const recipient = 'ngugijacinta07@gmail.com';
+        const subject = `TechPath submission from ${studentProfile.name}`;
+        const body = `Name: ${studentProfile.name}\nEmail: ${studentProfile.email}\nPhone: ${studentProfile.phone}\n\nThis student started the TechPath quiz.`;
+
+        const mailto = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open mail client (user may need to send the email). Then redirect to quiz.
+        window.location.href = mailto;
+
+        // Redirect to quiz shortly after opening mail client.
+        setTimeout(() => {
+            window.location.href = 'quiz.html';
+        }, 700);
 
     }
 

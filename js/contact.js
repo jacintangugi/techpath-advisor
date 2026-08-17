@@ -314,41 +314,10 @@ contactForm.addEventListener(
         }
 
 
-        /*
-            Show successful submission message.
-        */
-
-        successMessage.textContent =
-            "✓ Thank you! Your feedback has been submitted successfully.";
-
-        successMessage.style.display =
-            "block";
-
-
-        /*
-            Reset the form after successful submission.
-        */
-
-        contactForm.reset();
-
-
-        /*
-            Remove validation styling after reset.
-        */
-
-        [
-            nameInput,
-            emailInput,
-            subjectInput,
-            messageInput
-        ].forEach(function(input) {
-
-            input.classList.remove(
-                "is-valid",
-                "is-invalid"
-            );
-
-        });
+        // Submit the form to FormSubmit.co (action is set on the form).
+        // Calling `contactForm.submit()` bypasses this submit handler
+        // and lets the browser POST the form data to the configured action.
+        contactForm.submit();
 
     }
 );
