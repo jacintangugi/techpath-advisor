@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TechPath | Contact & Feedback</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =================================
+         NAVIGATION
+    ================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🚀 TechPath
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">Quiz</a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================
+         CONTACT PAGE
+    ================================== -->
+
+    <main class="contact-page">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="contact-hero">
+
+            <p class="contact-label">
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                We'd Love To
+                <span>Hear From You.</span>
+            </h1>
+
+            <p>
+                Have feedback about TechPath, a question about
+                the quiz, or an idea for improving the experience?
+                Send us a message.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT CONTENT -->
+
+        <section class="contact-grid">
+
+
+            <!-- =================================
+                 CONTACT INFORMATION
+            ================================== -->
+
+            <div class="contact-info">
+
+                <div>
+
+                    <p class="contact-label">
+                        CONTACT
+                    </p>
+
+                    <h2>
+                        Let's Connect
+                    </h2>
+
+                    <p class="contact-description">
+                        Your feedback helps us improve the
+                        TechPath experience for future students.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-details">
+
+                    <div class="contact-detail">
+
+                        <span class="contact-detail-icon">
+                            📧
+                        </span>
+
+                        <div>
+
+                            <small>
+                                EMAIL
+                            </small>
+
+                            <p>
+                                techpath@alueducation.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-detail">
+
+                        <span class="contact-detail-icon">
+                            🎓
+                        </span>
+
+                        <div>
+
+                            <small>
+                                PROJECT
+                            </small>
+
+                            <p>
+                                BSE Specialisation Advisor
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-detail">
+
+                        <span class="contact-detail-icon">
+                            💻
+                        </span>
+
+                        <div>
+
+                            <small>
+                                SOURCE CODE
+                            </small>
+
+                            <p>
+                                GitHub Repository
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GITHUB BUTTON -->
+
+                <a
+                    href="#"
+                    class="github-button"
+                    id="githubLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View GitHub Project →
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 CONTACT FORM
+            ================================== -->
+
+            <div class="contact-form-card">
+
+                <div class="form-heading">
+
+                    <p class="contact-label">
+                        SEND A MESSAGE
+                    </p>
+
+                    <h2>
+                        Share Your Feedback
+                    </h2>
+
+                </div>
+
+
+                <form
+                    id="contactForm"
+                    novalidate
+                >
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="contactName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+
+                        <small
+                            class="error-message"
+                            id="contactNameError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="contactEmail">
+                            School Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="j.ngugi@alustudent.com"
+                            autocomplete="email"
+                        >
+
+                        <small
+                            class="error-message"
+                            id="contactEmailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="form-group">
+
+                        <label for="contactSubject">
+                            Subject
+                        </label>
+
+                        <select
+                            id="contactSubject"
+                            name="subject"
+                        >
+
+                            <option value="">
+                                Select a subject
+                            </option>
+
+                            <option value="feedback">
+                                Quiz Feedback
+                            </option>
+
+                            <option value="technical">
+                                Technical Issue
+                            </option>
+
+                            <option value="suggestion">
+                                Suggestion
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                        <small
+                            class="error-message"
+                            id="contactSubjectError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="contactMessage">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell us what you think..."
+                        ></textarea>
+
+                        <small
+                            class="error-message"
+                            id="contactMessageError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        class="form-success"
+                        id="formSuccess"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                    >
+                        Send Feedback →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>

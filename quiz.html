@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechPath | Specialisation Quiz</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============================
+         NAVIGATION
+    ================================ -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🚀 TechPath
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">Quiz</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ===============================
+         QUIZ HEADER
+    ================================ -->
+
+    <main class="quiz-page">
+
+        <!-- DEMO HERO WITH RESPONSIVE BACKGROUND -->
+
+        <section class="bg-hero" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop');">
+
+            <div class="hero-inner">
+
+                <h1>
+                    Explore TechPath Visuals
+                </h1>
+
+                <p>
+                    Responsive background images and a lightweight gallery — click any image to view full-size.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- RESPONSIVE GALLERY -->
+
+        <section class="gallery" aria-label="Sample image gallery">
+
+            <figure class="gallery-item">
+                <picture>
+                    <source srcset="assets/images/gallery1.jpg" type="image/jpeg">
+                    <img loading="lazy" alt="Student coding on a laptop" src="assets/images/gallery1.jpg" data-index="0">
+                </picture>
+                <figcaption>Coding workspace</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <picture>
+                    <source srcset="assets/images/gallery2.jpg" type="image/jpeg">
+                    <img loading="lazy" alt="Team planning a project" src="assets/images/gallery2.jpg" data-index="1">
+                </picture>
+                <figcaption>Project collaboration</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <picture>
+                    <source srcset="assets/images/gallery3.jpg" type="image/jpeg">
+                    <img loading="lazy" alt="UX design sketches on a table" src="assets/images/gallery3.jpg" data-index="2">
+                </picture>
+                <figcaption>Design & prototyping</figcaption>
+            </figure>
+
+        </section>
+
+        <p style="text-align:center;color:#94a3b8;font-size:0.9rem;margin-top:8px;">Place optimized images in <strong>assets/images/</strong> named <em>img1.jpg</em>, <em>img2.jpg</em>, <em>img3.jpg</em>, or update the paths in the gallery.</p>
+
+        <section class="quiz-header">
+
+            <div>
+                <p class="quiz-label">BSE SPECIALISATION ADVISOR</p>
+
+                <h1>
+                    Discover Your TechPath
+                </h1>
+
+                <p>
+                    Answer the questions honestly and discover
+                    which software engineering specialisation
+                    matches your interests.
+                </p>
+            </div>
+
+
+            <!-- Countdown Timer -->
+
+            <div class="timer-container">
+
+                <span>Time Remaining</span>
+
+                <strong id="timer">
+                    05:00
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================
+             PROGRESS
+        ================================ -->
+
+        <section class="progress-section">
+
+            <div class="progress-info">
+
+                <span id="questionNumber">
+                    Question 1 of 10
+                </span>
+
+                <span id="progressPercentage">
+                    10%
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================
+             QUIZ CONTAINER
+        ================================ -->
+
+        <section class="quiz-container">
+
+            <!-- QUESTION 1 -->
+
+            <div
+                class="question-card active"
+                data-question="1">
+
+                <span class="question-category">
+                    QUESTION 1
+                </span>
+
+                <h2>
+                    What would you most enjoy building?
+                </h2>
+
+                <p class="question-description">
+                    Imagine you have a year to create your
+                    first major technology project.
+                </p>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        <span class="answer-icon">💻</span>
+
+                        <span>
+                            A complete website or application
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="4">
+
+                        <span class="answer-icon">🤖</span>
+
+                        <span>
+                            An intelligent AI system
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="4">
+
+                        <span class="answer-icon">🥽</span>
+
+                        <span>
+                            A virtual or augmented reality experience
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="4">
+
+                        <span class="answer-icon">⚙️</span>
+
+                        <span>
+                            A system that interacts closely with hardware
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+
+            <div
+                class="question-card"
+                data-question="2">
+
+                <span class="question-category">
+                    QUESTION 2
+                </span>
+
+                <h2>
+                    Which problem sounds most exciting?
+                </h2>
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        💻 Create a platform people can use
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="4">
+
+                        🤖 Predict patterns from data
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="4">
+
+                        🥽 Create immersive digital experiences
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="4">
+
+                        ⚙️ Improve computer efficiency
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 3 - IMAGE HOTSPOT -->
+
+            <div class="question-card" data-question="3">
+
+                <div class="question-number">Interactive Question</div>
+
+                <h2>
+                    Which specialisation interests you the most?
+                </h2>
+
+                <p class="question-instruction">
+                    Click one of the four areas in the image below.
+                </p>
+
+                <div class="hotspot-container">
+
+                    <img
+                        src="assets/images/hotspot-lab.png"
+                        alt="Four BSE software engineering specialisations"
+                        id="hotspotImage"
+                    >
+
+                    <!-- Clickable areas -->
+
+                    <button
+                        type="button"
+                        class="hotspot-area hotspot-fullstack"
+                        data-specialisation="Full-Stack Web Development"
+                        data-path="fullstack"
+                        data-points="5"
+                        aria-label="Full-Stack Web Development"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="hotspot-area hotspot-ml"
+                        data-specialisation="Machine Learning"
+                        data-path="machinelearning"
+                        data-points="5"
+                        aria-label="Machine Learning"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="hotspot-area hotspot-arvr"
+                        data-specialisation="AR/VR"
+                        data-path="arvr"
+                        data-points="5"
+                        aria-label="AR/VR"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="hotspot-area hotspot-lowlevel"
+                        data-specialisation="Low-Level Programming"
+                        data-path="lowlevel"
+                        data-points="5"
+                        aria-label="Low-Level Programming"
+                    ></button>
+
+                </div>
+
+                <p id="hotspotFeedback" class="hotspot-feedback" aria-live="polite"></p>
+
+            </div>
+
+
+            <!-- QUESTION 4 -->
+
+            <div
+                class="question-card"
+                data-question="4">
+
+                <span class="question-category">
+                    QUESTION 4
+                </span>
+
+                <h2>
+                    You receive a huge dataset. What interests you most?
+                </h2>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        Build a dashboard to display it
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="5">
+
+                        Discover patterns and make predictions
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="4">
+
+                        Turn the data into an immersive experience
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="5">
+
+                        Optimise how the computer processes it
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 5 - AUDIO -->
+
+            <div
+                class="question-card"
+                data-question="5">
+
+                <span class="question-category">
+                    QUESTION 5 · AUDIO SCENARIO
+                </span>
+
+                <h2>
+                    Listen to the scenario and choose your preferred role.
+                </h2>
+
+
+                <div class="audio-player">
+
+                    <p>
+                        🎧 Technology Scenario
+                    </p>
+
+                    <audio
+                        id="scenarioAudio"
+                        controls>
+
+                        <source
+                            src="assets/audio/scenario.mp3"
+                            type="audio/mpeg">
+
+                        Your browser does not support audio.
+
+                    </audio>
+
+                </div>
+
+
+                <p class="question-description">
+
+                    A company wants to automatically identify
+                    suspicious transactions.
+
+                    What would you prefer to work on?
+
+                </p>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        Build the platform
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="5">
+
+                        Create the detection model
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="4">
+
+                        Visualise the problem
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="5">
+
+                        Improve system performance
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 6 -->
+
+            <div
+                class="question-card"
+                data-question="6">
+
+                <span class="question-category">
+                    QUESTION 6
+                </span>
+
+                <h2>
+                    You receive a VR headset. What would you do?
+                </h2>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        Build a website for the application
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="5">
+
+                        Create an AI assistant
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="5">
+
+                        Design a virtual world
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="5">
+
+                        Improve the hardware interaction
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 7 - VIDEO -->
+
+            <div
+                class="question-card"
+                data-question="7">
+
+                <span class="question-category">
+                    QUESTION 7 · VIDEO SCENARIO
+                </span>
+
+                <h2>
+                    Watch the scenario and choose what you would investigate.
+                </h2>
+
+
+                <div class="video-container">
+
+                    <video
+                        id="scenarioVideo"
+                        controls>
+
+                        <source
+                            src="assets/video/scenario.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support video.
+
+                    </video>
+
+                </div>
+
+
+                <p class="question-description">
+
+                    The application suddenly becomes extremely slow.
+                    What would you investigate first?
+
+                </p>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        Check the user interface and application flow
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="3">
+
+                        Analyse data and processes
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="4">
+
+                        Improve visual rendering
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="5">
+
+                        Check memory and system performance
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 8 -->
+
+            <div
+                class="question-card"
+                data-question="8">
+
+                <span class="question-category">
+                    QUESTION 8
+                </span>
+
+                <h2>
+                    What type of challenge do you enjoy?
+                </h2>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="4">
+
+                        Designing and building applications
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="4">
+
+                        Finding patterns in information
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="4">
+
+                        Creating creative digital experiences
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="4">
+
+                        Understanding computers internally
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 9 -->
+
+            <div
+                class="question-card"
+                data-question="9">
+
+                <span class="question-category">
+                    QUESTION 9
+                </span>
+
+                <h2>
+                    What would you choose to learn this weekend?
+                </h2>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="5">
+
+                        JavaScript and Web Development
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="5">
+
+                        Python and Artificial Intelligence
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="5">
+
+                        Unity and 3D Development
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="5">
+
+                        C/C++ and Computer Systems
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 10 -->
+
+            <div
+                class="question-card"
+                data-question="10">
+
+                <span class="question-category">
+                    QUESTION 10 · FINAL CHALLENGE
+                </span>
+
+                <h2>
+                    You have one year to build your dream technology project.
+                    What would it be?
+                </h2>
+
+
+                <div class="answer-grid">
+
+                    <button
+                        class="answer-option"
+                        data-path="fullstack"
+                        data-points="5">
+
+                        💻 A social platform
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="machinelearning"
+                        data-points="5">
+
+                        🤖 An intelligent AI assistant
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="arvr"
+                        data-points="5">
+
+                        🥽 A virtual world
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        data-path="lowlevel"
+                        data-points="5">
+
+                        ⚙️ A smart hardware system
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===============================
+                 QUIZ CONTROLS
+            ================================ -->
+
+            <div class="quiz-controls">
+
+                <button
+                    id="previousButton"
+                    class="secondary-button"
+                    type="button">
+
+                    ← Previous
+
+                </button>
+
+
+                <button
+                    id="nextButton"
+                    class="primary-button"
+                    type="button">
+
+                    Next →
+
+                </button>
+
+
+                <button
+                    id="submitQuiz"
+                    class="primary-button"
+                    type="button"
+                    hidden>
+
+                    See My TechPath 🚀
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Quiz JavaScript -->
+
+    <script src="js/quiz.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+</html>

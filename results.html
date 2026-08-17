@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TechPath | Your Results</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =================================
+         NAVIGATION
+    ================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🚀 TechPath
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================
+         RESULTS MAIN CONTENT
+    ================================== -->
+
+    <main class="results-page">
+
+
+        <!-- =================================
+             RESULT HERO
+        ================================== -->
+
+        <section class="result-hero">
+
+            <div class="result-badge">
+                ✨ QUIZ COMPLETE
+            </div>
+
+            <h1>
+                Your TechPath
+                <span>Has Been Discovered</span>
+            </h1>
+
+            <p>
+                Based on your answers, we've identified
+                the software engineering specialisation
+                that best matches your interests and strengths.
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             RECOMMENDED PATH
+        ================================== -->
+
+        <section class="recommendation-card">
+
+            <div class="recommendation-icon"
+                 id="resultIcon">
+
+                🤖
+
+            </div>
+
+            <div class="recommendation-content">
+
+                <p class="result-label">
+                    YOUR STRONGEST MATCH
+                </p>
+
+                <h2 id="recommendedPath">
+                    Machine Learning
+                </h2>
+
+                <p id="resultDescription">
+                    You appear to enjoy working with data,
+                    patterns, algorithms and intelligent systems.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             SCORE + CANVAS
+        ================================== -->
+
+        <section class="results-grid">
+
+
+            <!-- CANVAS CARD -->
+
+            <div class="chart-card">
+
+                <div class="section-heading">
+
+                    <p>
+                        PERFORMANCE PROFILE
+                    </p>
+
+                    <h2>
+                        Your Specialisation Map
+                    </h2>
+
+                </div>
+
+
+                <div class="canvas-container">
+
+                    <canvas
+                        id="resultsCanvas"
+                        width="600"
+                        height="500"
+                        aria-label="Specialisation score chart">
+                    </canvas>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCORE SUMMARY -->
+
+            <div class="score-card">
+
+                <div class="section-heading">
+
+                    <p>
+                        SCORE BREAKDOWN
+                    </p>
+
+                    <h2>
+                        Your Results
+                    </h2>
+
+                </div>
+
+
+                <div class="score-list">
+
+
+                    <div class="score-item">
+
+                        <div class="score-info">
+
+                            <span>
+                                💻 Full-Stack
+                            </span>
+
+                            <strong id="fullstackScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                        <div class="score-bar">
+
+                            <div
+                                id="fullstackBar"
+                                class="score-fill">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="score-item">
+
+                        <div class="score-info">
+
+                            <span>
+                                🤖 Machine Learning
+                            </span>
+
+                            <strong id="machinelearningScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                        <div class="score-bar">
+
+                            <div
+                                id="machinelearningBar"
+                                class="score-fill">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="score-item">
+
+                        <div class="score-info">
+
+                            <span>
+                                🥽 AR / VR
+                            </span>
+
+                            <strong id="arvrScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                        <div class="score-bar">
+
+                            <div
+                                id="arvrBar"
+                                class="score-fill">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="score-item">
+
+                        <div class="score-info">
+
+                            <span>
+                                ⚙️ Low-Level Programming
+                            </span>
+
+                            <strong id="lowlevelScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                        <div class="score-bar">
+
+                            <div
+                                id="lowlevelBar"
+                                class="score-fill">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PERFORMANCE STATS
+        ================================== -->
+
+        <section class="stats-section">
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    📝
+                </span>
+
+                <div>
+
+                    <strong id="questionsAnswered">
+                        0
+                    </strong>
+
+                    <p>
+                        Questions Answered
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    🔥
+                </span>
+
+                <div>
+
+                    <strong id="streakScore">
+                        0
+                    </strong>
+
+                    <p>
+                        Answer Streak
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    ⏱️
+                </span>
+
+                <div>
+
+                    <strong id="timeUsed">
+                        0:00
+                    </strong>
+
+                    <p>
+                        Time Used
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             NEXT STEPS
+        ================================== -->
+
+        <section class="next-step-card">
+
+            <div class="next-step-content">
+
+                <p class="result-label">
+                    YOUR NEXT STEP
+                </p>
+
+                <h2 id="nextStepTitle">
+                    Start Exploring Your Path
+                </h2>
+
+                <p id="nextStepDescription">
+                    Use your result as a starting point.
+                    Explore projects, courses and technologies
+                    related to your recommended specialisation.
+                </p>
+
+            </div>
+
+
+            <div class="next-step-actions">
+
+                <a
+                    href="quiz.html"
+                    class="secondary-result-button">
+
+                    Retake Quiz
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="primary-result-button">
+
+                    Give Feedback →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =================================
+         RESULTS JAVASCRIPT
+    ================================== -->
+
+    <script src="js/results.js"></script>
+
+</body>
+
+</html>
